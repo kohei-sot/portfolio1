@@ -1,0 +1,322 @@
+
+/* ==============================
+   WHERE 管理画面
+============================== */
+
+
+/* ページ全体 */
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* ==============================
+   ヘッダー
+============================== */
+
+header {
+    background-color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 60px;
+    letter-spacing: 8px;
+}
+
+header p {
+    margin-top: 10px;
+}
+
+
+/* 戻るリンク */
+
+.history-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.history-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+
+/* ==============================
+   メインコンテンツ
+============================== */
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+main h2 {
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   問題登録フォーム
+============================== */
+
+.question-card {
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.question-card label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.question-card input,
+.question-card select,
+.question-card textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.question-card input:focus,
+.question-card select:focus,
+.question-card textarea:focus {
+    outline: none;
+    border-color: #555;
+}
+
+
+/* 説明文 */
+
+.help-text {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* 写真プレビュー */
+
+#image-preview {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    margin-top: 15px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+#image-preview[hidden] {
+    display: none;
+}
+
+
+/* 登録ボタン */
+
+.answer-button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 14px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.answer-button:hover {
+    background-color: #555;
+}
+
+
+/* ==============================
+   問題一覧
+============================== */
+
+.question-list {
+    margin-top: 60px;
+}
+
+.question-list h2 {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333;
+}
+
+
+/* 問題カード */
+
+.registered-question {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+/* 写真 */
+
+.registered-question img {
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+
+/* 問題情報 */
+
+.registered-question-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.registered-question-info p {
+    margin: 7px 0;
+    overflow-wrap: anywhere;
+}
+
+
+/* 難易度 */
+
+.difficulty-label {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #eee;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+
+/* 状態 */
+
+.status-active {
+    color: #27734a;
+    font-weight: bold;
+}
+
+.status-answered {
+    color: #777;
+    font-weight: bold;
+}
+
+.status-deleted {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+
+/* 問題がない場合 */
+
+.no-questions {
+    padding: 30px;
+    text-align: center;
+    color: #777;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+/* ==============================
+   操作ボタン
+============================== */
+
+.delete-button,
+.restore-button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #c0392b;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #922b21;
+}
+
+.restore-button {
+    background-color: #27734a;
+    color: white;
+}
+
+.restore-button:hover {
+    background-color: #1e5637;
+}
+
+
+/* ==============================
+   スマートフォン対応
+============================== */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 45px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .question-card {
+        padding: 20px;
+    }
+
+    .registered-question {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .registered-question img {
+        width: 100px;
+        height: 85px;
+    }
+
+    .registered-question-info {
+        flex: 1;
+    }
+
+    .delete-button,
+    .restore-button {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>問題管理 | WHERE</title>
+
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>WHERE</h1>
+        <p>問題管理ページ</p>
+
+        <a href="index.html" class="history-button">
+            トップページに戻る
+        </a>
+    </header>
+
+    <main>
+
+        <!-- 新しい問題の登録 -->
+
+        <h2>新しい問題を登録</h2>
+
+        <section class="question-card">
+
+            <label for="question-number">問題番号</label>
+
+            <input
+                type="number"
+                id="question-number"
+                min="1"
+                required
+            >
+
+            <p class="help-text">
+                使用済みの問題番号は再利用できません。
+            </p>
+
+
+            <label for="question-difficulty">難易度</label>
+
+            <select id="question-difficulty" required>
+                <option value="">難易度を選択してください</option>
+                <option value="beginner">初級</option>
+                <option value="intermediate">中級</option>
+                <option value="advanced">上級</option>
+            </select>
+
+
+            <label for="question-image">写真</label>
+
+            <input
+                type="file"
+                id="question-image"
+                accept="image/*"
+                required
+            >
+
+            <img
+                id="image-preview"
+                alt="選択した写真のプレビュー"
+                hidden
+            >
+
+
+            <label for="correct-answer">正解</label>
+
+            <input
+                type="text"
+                id="correct-answer"
+                placeholder="観光地名を入力してください"
+                required
+            >
+
+
+            <label for="answer-alias">正解の別名</label>
+
+            <textarea
+                id="answer-alias"
+                rows="4"
+                placeholder="別名を1行に1つずつ入力してください"
+            ></textarea>
+
+
+            <button
+                class="answer-button"
+                id="register-button"
+                type="button"
+            >
+                問題を登録する
+            </button>
+
+        </section>
+
+
+        <!-- 回答受付中 -->
+
+        <section class="question-list">
+
+            <h2>回答受付中の問題</h2>
+
+            <div id="active-questions"></div>
+
+        </section>
+
+
+        <!-- 回答済み -->
+
+        <section class="question-list">
+
+            <h2>回答済みの問題</h2>
+
+            <div id="answered-questions"></div>
+
+        </section>
+
+
+        <!-- 削除済み -->
+
+        <section class="question-list">
+
+            <h2>削除済みの問題</h2>
+
+            <p class="help-text">
+                削除した問題はここに保存されます。
+                復元すると再び管理画面に表示されます。
+            </p>
+
+            <div id="deleted-questions"></div>
+
+        </section>
+
+    </main>
+
+    <script src="js/admin.js"></script>
+
+</body>
+</html>

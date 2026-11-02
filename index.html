@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WHERE</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>WHERE</h1>
+        <p>写真を見て、日本の観光地を当てよう！</p>
+
+        <a href="answer.html" class="history-button">
+            終了した問題
+        </a>
+    </header>
+
+    <main>
+
+        <h2>公開中の問題</h2>
+
+        <!-- 初級 -->
+        <section class="question-card" data-difficulty="beginner">
+            <h2>初級</h2>
+        </section>
+
+        <!-- 中級 -->
+        <section class="question-card" data-difficulty="intermediate">
+            <h2>中級</h2>
+        </section>
+
+        <!-- 上級 -->
+        <section class="question-card" data-difficulty="advanced">
+            <h2>上級</h2>
+        </section>
+
+    </main>
+
+    <!-- 正誤判定画面 -->
+    <div id="result-screen" class="result-screen">
+
+        <div class="result-content">
+
+            <p id="result-label"></p>
+
+            <h1 id="result-message"></h1>
+
+            <button id="close-result">
+                閉じる
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
